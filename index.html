@@ -1,1 +1,23 @@
-TEST!
+<html>
+    <head>
+        <title>Theme</title>
+        <link href="one/theme.css" rel="stylesheet" media="all" />
+    </head>
+    <body>
+        <select id="themepicker">
+            <option>one</option>
+            <option>two</option>
+        </select>
+
+        <h1>Hello</h1>
+
+        <script src="jquery-3.1.0.min.js"></script>
+        <script>
+            $(function() {
+                $("#themepicker").change(function() {
+                    $("head").children(":last").attr({ href: this.value + "/theme.css" });
+                });
+            });
+        </script>
+    </body>
+</html>
