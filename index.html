@@ -1,12 +1,11 @@
 <html>
     <head>
         <title>Theme</title>
-        <link href="one/theme.css" rel="stylesheet" media="all" />
+        <link href="classic/classic.css" rel="stylesheet" media="all" />
     </head>
     <body>
         <select id="themepicker">
-            <option>one</option>
-            <option>two</option>
+            <option>classic</option>
         </select>
 
         <h1>Hello</h1>
@@ -15,7 +14,7 @@
         <script>
             $(function() {
                 $("#themepicker").change(function() {
-                    $("head").children(":last").attr({ href: this.value + "/theme.css" });
+                    $("head").children(":last").attr({ href: this.value + "/" + this.value + ".css" });
                 });
             });
         </script>
